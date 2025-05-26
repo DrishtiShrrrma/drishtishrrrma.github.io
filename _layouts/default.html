@@ -129,55 +129,110 @@
             </td>
           </tr>
         </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat == 'research' %}
+        <!-- PUBLICATIONS -->
+        <table style="width:100%;border:0px;border-spacing:0px;margin:auto;">
           <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
-            </td>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
-              <h3>{{post.title}}</h3>
-              <br>
-              {{post.authors}}
-
-              <br>
-              <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
-              <br>
-              {% if post.arxiv %}
-              <a href="{{post.arxiv}}">arxiv</a> /
-              {% endif %}
-              {% if post.video %}
-              <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a> /
-              {% endif %}
-              {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
-              {% endif %}
-              {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
-              {% endif %}
-              {% if post.website %}
-              <a href="{{post.website}}">website</a> /
-              {% endif %}
-              {% if post.youtube %}
-              <a href="{{post.youtube}}">youtube</a> /
-              {% endif %}
-              <p></p>
-              {{ post.excerpt }}
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Publications</h2>
             </td>
           </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
         </table>
-        <br>
-        <br>
-        <br>
+
+        <div style="padding:2.5%; max-width:800px; margin:auto; font-size:0.95em; line-height:1.5;">
+
+          <!-- M-RewardBench -->
+          <div style="margin-bottom:1.5em;">
+            <!-- <img src="images/m-rewardbench.png" alt="M-RewardBench image" style="width:100%; max-width:400px;" /> -->
+            <p><strong>M-REWARDBENCH: Evaluating Reward Models in Multilingual Settings</strong><br>
+            <em>Accepted to ACL 2025 (Main Conference) | Rated 4/5</em><br>
+            Srishti Gureja*, Lester Miranda*, Shayekh Bin Islam, Rishabh Maheshwary, Drishti Sharma, Gusti Winata<br>
+            Advisors: Nathan Lambert, Sebastian Ruder, Sara Hooker, Marzieh Fadaee<br>
+            <a href="https://arxiv.org/pdf/2410.15522">Paper</a> /
+            <a href="https://github.com/Cohere-Labs-Community/m-rewardbench">Code</a> /
+            <a href="https://huggingface.co/datasets/CohereLabsCommunity/multilingual-reward-bench">Dataset</a> /
+            <a href="https://coherelabscommunity-m-rewardbench.hf.space/">Leaderboard</a><br>
+            <em>We built the first comprehensive multilingual benchmark for reward model evaluation, covering 23 languages and 2.87k annotated preference pairs across chat, safety, reasoning, and translation...</em>
+            </p>
+          </div>
+
+          <!-- LeSeR -->
+          <div style="margin-bottom:1.5em;">
+            <!-- <img src="images/leser.png" alt="LeSeR image" style="width:100%; max-width:400px;" /> -->
+            <p><strong>Lexical Reranking of Semantic Retrieval (LeSeR) for Regulatory QA</strong><br>
+            <em>4th place @ COLING 2025 (RegNLP Track)</em><br>
+            Drishti Sharma, Jebish Purbey, Siddhant Gupta, Khawaja Murad, Siddartha Pullakhandam, Ram Mohan Rao Kadiyala<br>
+            <a href="https://aclanthology.org/2025.regnlp-1.6/">Paper</a><br>
+            <em>Our system outperformed several baselines on regulatory question answering by integrating dense retrieval with a reranking module...</em>
+            </p>
+          </div>
+
+          <!-- Maya -->
+          <div style="margin-bottom:1.5em;">
+            <!-- <img src="images/maya.png" alt="Maya image" style="width:100%; max-width:400px;" /> -->
+            <p><strong>Behind Maya: Building a Multilingual Vision Language Model</strong><br>
+            <em>Accepted @ VLMs4ALL Workshop, CVPR 2025</em><br>
+            Drishti Sharma et al.<br>
+            <a href="https://arxiv.org/abs/2505.08910">Paper</a><br>
+            <em>Maya is an open-source multilingual VLM trained on culturally and linguistically diverse image-text pairs in 8 languages...</em>
+            </p>
+          </div>
+
+          <!-- CHIPSAL -->
+          <div style="margin-bottom:1.5em;">
+            <!-- <img src="images/chipsal.png" alt="CHIPSAL image" style="width:100%; max-width:400px;" /> -->
+            <p><strong>Detection of Language, Hate Speech, and Targets using LLMs in Devanagari Script</strong><br>
+            <em>Accepted @ COLING 2025 (CHiPSAL Track)</em><br>
+            Drishti Sharma et al.<br>
+            <a href="https://aclanthology.org/2025.chipsal-1.23/">Paper</a><br>
+            <em>Developed high-performing models for hate speech detection and target identification across low-resource Devanagari languages...</em>
+            </p>
+          </div>
+
+          <!-- FINLP -->
+          <div style="margin-bottom:1.5em;">
+            <!-- <img src="images/finlp.png" alt="FINLP image" style="width:100%; max-width:400px;" /> -->
+            <p><strong>Sequential Learning for Claim Verification and Explanation in Financial Domains</strong><br>
+            <em>3rd place @ COLING 2025 (FINLP Track)</em><br>
+            Drishti Sharma et al.<br>
+            <a href="https://aclanthology.org/2025.finnlp-1.35/">Paper</a><br>
+            <em>Designed a pipeline that combines misinformation detection with natural language explanations using Qwen, Mistral, and Gemma-2...</em>
+            </p>
+          </div>
+
+          <!-- INCLUDE -->
+          <div style="margin-bottom:1.5em;">
+            <!-- <img src="images/include.png" alt="INCLUDE image" style="width:100%; max-width:400px;" /> -->
+            <p><strong>INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge</strong><br>
+            <em>✨ Spotlight @ ICLR 2025</em><br>
+            Drishti Sharma et al.<br>
+            <a href="https://openreview.net/pdf?id=k3gCieTXeY">Paper</a><br>
+            <em>Introduces a 44-language benchmark built from 197K+ culturally-grounded exam QA pairs sourced globally...</em>
+            </p>
+          </div>
+
+          <!-- Robust AI Text Detection -->
+          <div style="margin-bottom:1.5em;">
+            <!-- <img src="images/ai-text-detection.png" alt="AI Text Detection image" style="width:100%; max-width:400px;" /> -->
+            <p><strong>Robust and Fine-Grained Detection of AI-Generated Texts</strong><br>
+            <em>Submitted to ACL 2025</em><br>
+            Drishti Sharma et al.<br>
+            <a href="https://arxiv.org/pdf/2504.11952">Paper</a><br>
+            <em>Trained and benchmarked models for fine-grained AI-generated content detection across 2.4M multilingual samples...</em>
+            </p>
+          </div>
+
+          <!-- Cultural + Local LLMs -->
+          <div style="margin-bottom:1.5em;">
+            <!-- <img src="images/cultural-llms.png" alt="Cultural LLMs image" style="width:100%; max-width:400px;" /> -->
+            <p><strong>Improving Multilingual Capabilities with Cultural and Local Knowledge in LLMs</strong><br>
+            <em>Submitted to ACL 2025</em><br>
+            Drishti Sharma et al.<br>
+            <a href="https://arxiv.org/pdf/2504.09753">Paper</a><br>
+            <em>Instruction-tuned 7 LLMs with 485K culturally-informed English-Hindi pairs, yielding consistent improvements...</em>
+            </p>
+          </div>
+
+        </div>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
