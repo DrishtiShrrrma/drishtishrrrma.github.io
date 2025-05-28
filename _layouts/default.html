@@ -184,7 +184,7 @@
             <em>Accepted @ COLING 2025 (CHiPSAL Track)</em><br>
             Drishti Sharma et al.<br>
             <a href="https://aclanthology.org/2025.chipsal-1.23/">Paper</a><br>
-            <em>Developed high-performing models for hate speech detection and target identification across low-resource Devanagari languages...</em>
+            <em>This work presents a modular multilingual NLP system for five Devanagari-script languages—Hindi, Nepali, Marathi, Sanskrit, and Bhojpuri—addressing three tasks: (1) language identification, (2) hate speech detection, and (3) hate speech target classification. Each task is tackled using a distinct set of models and strategies: (1) for language identification, an ensemble of fine-tuned IndicBERT V2, MuRIL, and Gemma-2 9B models achieved high accuracy via majority voting with fallback logic; (2) for hate speech detection, a separate ensemble combined IndicBERT V2, Gemma-2 9B, and Gemma-2 27B fine-tuned using Odds Ratio Preference Optimization (ORPO), with BERT-based models trained using focal loss (α = 0.35, γ = 4.0) to address severe class imbalance; and (3) for target classification, the best performance was achieved by a single Gemma-2 27B model fine-tuned with ORPO, without ensembling. All decoder-only models were fine-tuned using 4-bit LoRA to ensure efficient training. The Sub-task A ensemble achieved an F1 score of 0.9980, the Sub-task B ensemble reached 0.7652, and the standalone model in Sub-task C attained 0.6804, demonstrating the value of task-specific model design for low-resource, script-sensitive language understanding.</em>
             </p>
           </div>
 
