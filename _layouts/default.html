@@ -129,116 +129,74 @@
             </td>
           </tr>
         </table>
-        <!-- PUBLICATIONS -->
-        <table style="width:100%;border:0px;border-spacing:0px;margin:auto;">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>Publications</h2>
+             <!--  <p> These include coursework, side projects and unpublished research work. 
+              </p> -->
             </td>
           </tr>
         </table>
 
-        <div style="padding:2.5%; max-width:800px; margin:auto; font-size:0.95em; line-height:1.5;">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  
+          {% for post in site.posts %}
+          {% for cat in post.categories %}
+          {% if cat == 'research' %}
+          <tr>
+            <!-- <h2> Publications </h2> -->
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
 
-          <!-- M-RewardBench -->
-          <div style="margin-bottom:1.5em;">
-            <!-- <img src="images/m-rewardbench.png" alt="M-RewardBench image" style="width:100%; max-width:400px;" /> -->
-            <p><strong>M-REWARDBENCH: Evaluating Reward Models in Multilingual Settings</strong><br>
-            <em>Accepted to ACL 2025 (Main Conference) | Rated 4/5</em><br>
-            Srishti Gureja, Lester J. Miranda, Shayekh Bin Islam, Rishabh Maheshwary, Drishti Sharma, Gusti Winata<br>
-            Advisors: Nathan Lambert, Sebastian Ruder, Sara Hooker, Marzieh Fadaee<br>
-            <a href="https://arxiv.org/pdf/2410.15522">Paper</a> /
-            <a href="https://github.com/Cohere-Labs-Community/m-rewardbench">Code</a> /
-            <a href="https://huggingface.co/datasets/CohereLabsCommunity/multilingual-reward-bench">Dataset</a> /
-            <a href="https://coherelabscommunity-m-rewardbench.hf.space/">Leaderboard</a><br>
-            <em>This work presents M-REWARDBENCH, the first large-scale benchmark for evaluating reward models (RMs) in multilingual settings, covering 23 languages across 8 scripts and 5 language families. The benchmark assesses four core capabilities: (1) chat, (2) safety, (3) reasoning, and (4) translation, using 2.87k human-aligned preference instances. A total of 25 reward models—spanning Classifier, Generative, and Implicit (DPO-trained) types—are evaluated. Key findings include: (1) Generative RMs (e.g., GPT-4 Turbo) achieve the highest multilingual performance and cross-lingual consistency, with only a 3% average performance drop compared to English, (2) Classifier and Implicit RMs exhibit larger drops (~8–13%) and greater volatility, especially in subjective categories like chat and safety, and (3) translation quality, language resource availability, and script type (e.g., Latin, Cyrillic) significantly impact RM performance. For translation, the benchmark incorporates easy and hard subsets from the MAPLE dataset across four directions (en↔zh, en↔de), showing that harder tasks consistently reduce accuracy. Performance improves by 1–3% when using higher-quality translations (Google Translate over NLLB-3.3B). </em>
-            </p>
-          </div>
+              <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3><a href="{{post.link}}">{{post.title}}</a></h3>
+              <br>
+               <br>
+              {{post.authors}}
 
-          <!-- LeSeR -->
-          <div style="margin-bottom:1.5em;">
-            <!-- <img src="images/leser.png" alt="LeSeR image" style="width:100%; max-width:400px;" /> -->
-            <p><strong>Lexical Reranking of Semantic Retrieval (LeSeR) for Regulatory QA</strong><br>
-            <em>4th place @ COLING 2025 (RegNLP Track)</em><br>
-            Jebish Purbey, Drishti Sharma, Siddhant Gupta, Khawaja Murad, Siddartha Pullakhandam, Ram Mohan Rao Kadiyala<br>
-            <a href="https://aclanthology.org/2025.regnlp-1.6/">Paper</a><br>
-            <em>It introduces LeSeR (Lexical Reranking of Semantic Retrieval), a hybrid method that first performs dense semantic retrieval using fine-tuned embedding models on query-passage pairs, then reranks results with BM25, a classical lexical retrieval method. This two-stage decoupled pipeline boosts both recall and precision, outperforming standalone dense or lexical models. We experimented with multiple embedding models—Stella, BGE, CDE, and MPNet—applying fine-tuning using Multiple Negative Symmetric Ranking (MNSR) Loss. Among these, BGE_MNSR integrated with LeSeR (BGE_LeSeR) achieved the best retrieval performance, with Recall@10 of 0.8201 and mAP@10 of 0.6655, outperforming both dense-only and lexical-only baselines. For answer generation, the top-performing combination was BGE_LeSeR with Qwen2.5 7B, which achieved the highest RePASs score (0.4340), demonstrating strong entailment, obligation coverage, and low contradiction.</em>
-            </p>
-          </div>
-
-          <!-- Maya -->
-          <div style="margin-bottom:1.5em;">
-            <!-- <img src="images/maya.png" alt="Maya image" style="width:100%; max-width:400px;" /> -->
-            <p><strong>Behind Maya: Building a Multilingual Vision Language Model</strong><br>
-            <em>Accepted @ VLMs4ALL Workshop, CVPR 2025</em><br>
-            Drishti Sharma et al.<br>
-            <a href="https://arxiv.org/abs/2505.08910">Paper</a><br>
-            <em>This work introduces Maya, an open-source multilingual VLM designed to address the underperformance of existing VLMs in low-resource languages and diverse cultural contexts. It is built on two major contributions: (1) a multilingual image-text pretraining dataset with 4.4M samples across 8 languages (English, Chinese, French, Spanish, Russian, Hindi, Japanese, Arabic), created via a hybrid translation framework using tools like Aya 35B, rigorous prompt engineering (BLEU/N-gram scoring), and balanced sampling from the LLaVA dataset; (2) a multilingual multimodal model architecture that uses SigLIP as the vision encoder (replacing CLIP for its multilingual adaptability and variable patch size support) and Aya-23 8B as the LLM (supporting 23 languages with an 8K context window). Visual features are projected via a 2-layer MLP with GELU to align with language space, inspired by LLaVA 1.5.Maya outperforms PALO-7B on LLaVA-Bench-In-The-Wild, offering a strong multilingual alternative to LLaVA.</em>
-            </p>
-          </div>
-
-          <!-- CHIPSAL -->
-          <div style="margin-bottom:1.5em;">
-            <!-- <img src="images/chipsal.png" alt="CHIPSAL image" style="width:100%; max-width:400px;" /> -->
-            <p><strong>Detection of Language, Hate Speech, and Targets using LLMs in Devanagari Script</strong><br>
-            <em>Accepted @ COLING 2025 (CHiPSAL Track)</em><br>
-            Drishti Sharma et al.<br>
-            <a href="https://aclanthology.org/2025.chipsal-1.23/">Paper</a><br>
-            <em>This work presents a modular multilingual NLP system for five Devanagari-script languages—Hindi, Nepali, Marathi, Sanskrit, and Bhojpuri—addressing three tasks: (1) language identification, (2) hate speech detection, and (3) hate speech target classification. Each task is tackled using a distinct set of models and strategies: (1) for language identification, an ensemble of fine-tuned IndicBERT V2, MuRIL, and Gemma-2 9B models achieved high accuracy via majority voting with fallback logic; (2) for hate speech detection, a separate ensemble combined IndicBERT V2, Gemma-2 9B, and Gemma-2 27B fine-tuned using Odds Ratio Preference Optimization (ORPO), with BERT-based models trained using focal loss (α = 0.35, γ = 4.0) to address severe class imbalance; and (3) for target classification, the best performance was achieved by a single Gemma-2 27B model fine-tuned with ORPO, without ensembling. All decoder-only models were fine-tuned using 4-bit LoRA to ensure efficient training. The Sub-task A ensemble achieved an F1 score of 0.9980, the Sub-task B ensemble reached 0.7652, and the standalone model in Sub-task C attained 0.6804, demonstrating the value of task-specific model design for low-resource, script-sensitive language understanding.</em>
-            </p>
-          </div>
-
-          <!-- FINLP -->
-          <div style="margin-bottom:1.5em;">
-            <!-- <img src="images/finlp.png" alt="FINLP image" style="width:100%; max-width:400px;" /> -->
-            <p><strong>Sequential Learning for Claim Verification and Explanation in Financial Domains</strong><br>
-            <em>3rd place @ COLING 2025 (FINLP Track)</em><br>
-            Drishti Sharma et al.<br>
-            <a href="https://aclanthology.org/2025.finnlp-1.35/">Paper</a><br>
-            <em>This work presents SeQwen, our sequential learning-based system developed for the COLING 2025 Financial Misinformation Detection (FMD) challenge, which focuses on two tasks: (1) classifying financial claims as True, False, or Not Enough Information (NEI), and (2) generating coherent explanations for each classification. We used the FIN-FACT dataset and evaluated multiple open-source LLMs—Qwen2.5, Mistral, Llama3, Gemma-2, and Phi-3. We adopted a two-stage sequential fine-tuning approach, where models were first fine-tuned for classification and then for joint classification and explanation generation. Key findings include: (1) Qwen2.5 7B emerged as the best-performing model, (2) sequential fine-tuning (SeQwen) consistently outperformed single-stage joint training, yielding a 7.1% improvement in overall score and substantial gains in explanation quality, and (3) simply extending joint training epochs led to smaller improvements than our staged approach. </em>
-            </p>
-          </div>
-
-          <!-- INCLUDE -->
-          <div style="margin-bottom:1.5em;">
-            <!-- <img src="images/include.png" alt="INCLUDE image" style="width:100%; max-width:400px;" /> -->
-            <p><strong>INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge</strong><br>
-            <em>✨ Spotlight @ ICLR 2025</em><br>
-            Drishti Sharma et al.<br>
-            <a href="https://openreview.net/pdf?id=k3gCieTXeY">Paper</a><br>
-            <em>This work presents INCLUDE, a large-scale multilingual benchmark designed to evaluate  LLMs on regional knowledge and cultural grounding across 44 languages and 15 scripts. INCLUDE comprises 197,243 multiple-choice questions sourced from 1,926 real-world exams administered in 52 countries, covering diverse subjects such as law, history, culture, and general knowledge. It includes two subsets—INCLUDE-BASE and INCLUDE-LITE—for scalable evaluation across a wide range of LLMs. Models evaluated include GPT-4o, GPT-3.5, Claude, Gemini, Mistral, Yi, and others. GPT-4o achieves the highest overall accuracy, but all models exhibit substantial performance degradation in underrepresented languages and unfamiliar scripts. Prompt language (English vs. native) and instruction tuning have limited impact on overall accuracy.</em>
-            </p>
-          </div>
-
-          <!-- Robust AI Text Detection -->
-          <div style="margin-bottom:1.5em;">
-            <!-- <img src="images/ai-text-detection.png" alt="AI Text Detection image" style="width:100%; max-width:400px;" /> -->
-            <p><strong>Robust and Fine-Grained Detection of AI-Generated Texts</strong><br>
-            <em>Submitted to ACL 2025</em><br>
-            Drishti Sharma et al.<br>
-            <a href="https://arxiv.org/pdf/2504.11952">Paper</a><br>
-            <em>Trained and benchmarked models for fine-grained AI-generated content detection across 2.4M multilingual samples...</em>
-            </p>
-          </div>
-
-          <!-- Cultural + Local LLMs -->
-          <div style="margin-bottom:1.5em;">
-            <!-- <img src="images/cultural-llms.png" alt="Cultural LLMs image" style="width:100%; max-width:400px;" /> -->
-            <p><strong>Improving Multilingual Capabilities with Cultural and Local Knowledge in LLMs</strong><br>
-            <em>Submitted to ACL 2025</em><br>
-            Drishti Sharma et al.<br>
-            <a href="https://arxiv.org/pdf/2504.09753">Paper</a><br>
-            <em>Instruction-tuned 7 LLMs with 485K culturally-informed English-Hindi pairs, yielding consistent improvements...</em>
-            </p>
-          </div>
-
-        </div>
+              <br>
+              <em><span style="color:red;">{{post.venue}}</span></em>, {{ post.date | date: "%Y" }}
+              <br>
+              {% if post.arxiv %}
+              <a href="{{post.arxiv}}">arxiv</a> /
+              {% endif %}
+              {% if post.video %}
+              <a href="{{post.video}}">video</a> /
+              {% endif %}
+              {% if post.code %}
+              <a href="{{post.code}}">code</a> /
+              {% endif %}
+              {% if post.poster %}
+              <a href="{{post.poster}}">poster</a> /
+              {% endif %}
+              {% if post.slides %}
+              <a href="{{post.slides}}">slides</a> /
+              {% endif %}
+              {% if post.website %}
+              <a href="{{post.website}}">website</a> /
+              {% endif %}
+              {% if post.youtube %}
+              <a href="{{post.youtube}}">youtube</a> /
+              {% endif %}
+              <p></p>
+              {{ post.excerpt }}
+            </td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </table>
+        <br>
+        <br>
+        <br>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Intel Projects</h2>
-              <p>Besides my work on the RealSense depth sensors and the publications above, a sampling of my publicly disclosed work
-              </p>
+              <h2>Talks</h2>
+              <!-- <p>Besides my work on the RealSense depth sensors and the publications above, a sampling of my publicly disclosed work
+              </p> -->
             </td>
           </tr>
         </table>
@@ -246,7 +204,7 @@
 
           {% for post in site.posts %}
           {% for cat in post.categories %}
-          {% if cat == 'Intel' %}
+          {% if cat == 'talk' %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
               <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
@@ -296,10 +254,10 @@
           {% endif %}
           {% endfor %}
           {% endfor %}
-        </table>
+        </table> 
         <br>
         <br>
-        <br>
+        <br> 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
@@ -313,13 +271,14 @@
 
           {% for post in site.posts %}
           {% for cat in post.categories %}
-          {% if cat != 'research' and cat != 'Intel' %}
+          {% if cat != 'research' and cat != 'talk' %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+              <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>{{post.title}}</h3>
+              <br>
               <br>
               <em>{{post.categories}} {{post.course}}</em>
               <br>
@@ -370,7 +329,7 @@
             <td style="padding:0px">
               <br>
               <p style="text-align:center;font-size:small;">
-                Design and source code from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website</a>
+                Design and source code on lease from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website</a>
               </p>
             </td>
           </tr>
@@ -381,4 +340,3 @@
 </body>
 
 </html>
-
