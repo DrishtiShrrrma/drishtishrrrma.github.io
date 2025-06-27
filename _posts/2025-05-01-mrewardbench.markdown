@@ -5,7 +5,7 @@ date: 2025-05-01 00:00:00 +0000
 image: /images/mrewardbench.png  # optional thumbnail image
 categories: research
 author: "Drishti Sharma"
-authors: "Srishti Gureja, Lester J. Miranda, Shayekh Bin Islam, Rishabh Maheshwary, <strong>Drishti Sharma</strong>, Gusti Winata"
+authors: "Srishti Gureja, Lester James V. Miranda, Shayekh Bin Islam, Rishabh Maheshwary, <strong>Drishti Sharma</strong>, Gusti Winata, Nathan Lambert, Sebastian Ruder, Sara Hooker, Marzieh Fadaee"
 venue: "ACL 2025 (Main Conference)"
 advisors: "Nathan Lambert, Sebastian Ruder, Sara Hooker, Marzieh Fadaee"
 link: https://arxiv.org/pdf/2410.15522  # replace with actual link
