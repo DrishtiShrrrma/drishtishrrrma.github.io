@@ -7,7 +7,7 @@ categories: research
 author: "Drishti Sharma"
 authors: "<strong>Drishti Sharma</strong> et al."
 venue: "ACL 2025 (Submitted)"
-link: https://your-paper-link.com  # optional
+link: https://arxiv.org/abs/2504.11952  # optional
 code: https://github.com/your-org/ai-detection  # optional
 excerpt: "This work presents robust, fine-grained models for detecting AI-generated text in multilingual contexts, trained and evaluated on a large-scale dataset of 2.4 million samples spanning various languages and content domains. The models are designed to distinguish between human- and LLM-generated content, detect subtle patterns in generation style and structure, and function effectively across diverse languages and scripts. Performance is benchmarked in both zero-shot and fine-tuned settings, with analysis of model sensitivity to generation source, prompt format, and language complexity. This research advances the development of reliable defenses against synthetic content in high-stakes multilingual applications.
 "
