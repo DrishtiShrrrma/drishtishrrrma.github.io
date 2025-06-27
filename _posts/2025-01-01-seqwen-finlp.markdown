@@ -1,0 +1,40 @@
+---
+layout: post
+title: "Sequential Learning for Claim Verification and Explanation in Financial Domains"
+date: 2025-10-10 00:00:00 +0000
+image: /images/seqwen.png  # optional thumbnail
+categories: research
+author: "Drishti Sharma"
+authors: "<strong>Drishti Sharma</strong> et al."
+venue: "COLING 2025 (FINLP Track, 3rd Place)"
+link: https://your-paper-link.com  # replace with actual paper or arXiv link
+code: https://github.com/your-org/seqwen  # optional
+excerpt: "SeQwen: A two-stage fine-tuning method for financial claim verification and explanation, winning 3rd place at COLING 2025 (FINLP Track)."
+---
+
+This work presents **SeQwen**, a sequential learning-based system developed for the **COLING 2025 Financial Misinformation Detection (FMD)** challenge.
+
+The challenge involved two core tasks:
+
+1. **Classifying financial claims** as *True*, *False*, or *Not Enough Information (NEI)*  
+2. **Generating coherent natural language explanations** for the classification
+
+We used the **FIN-FACT** dataset and evaluated several open-source LLMs, including:
+
+- **Qwen2.5**  
+- **Mistral**  
+- **Llama3**  
+- **Gemma-2**  
+- **Phi-3**
+
+Our system used a **two-stage sequential fine-tuning approach**:
+
+- Stage 1: fine-tune for claim classification  
+- Stage 2: fine-tune jointly for classification + explanation generation
+
+### Key findings:
+
+- **Qwen2.5 7B** was the best-performing model overall.
+- Sequential fine-tuning consistently outperformed single-stage joint training.
+- The approach yielded a **7.1% improvement** in overall score and significantly better explanation quality.
+- Simply increasing joint training epochs provided only marginal gains compared to the structured two-stage approach.
