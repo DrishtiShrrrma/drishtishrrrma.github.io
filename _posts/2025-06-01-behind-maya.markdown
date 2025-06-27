@@ -5,7 +5,7 @@ date: 2025-06-10 00:00:00 +0000
 image: /images/maya.png  # optional, update or remove
 categories: research
 author: "Drishti Sharma"
-authors: "<strong>Drishti Sharma</strong> et al."
+authors: "Nahid Alam, Karthik Reddy Kanjula, Surya Guthikonda, Timothy Chung, Bala Krishna S Vegesna, Abhipsha Das, Anthony Susevski, Ryan Sze-Yin Chan, S M Iftekhar Uddin, Shayekh Bin Islam, Roshan Santhosh, Snegha A, <strong>Drishti Sharma</strong>, Chen Liu, Isha Chaturvedi, Genta Indra Winata, Ashvanth.S, Snehanshu Mukherjee, Alham Fikri Aji"
 venue: "VLMs4ALL Workshop @ CVPR 2025"
 link: https://arxiv.org/abs/2505.08910  # replace with actual paper link
 code: https://github.com/nahidalam/maya  # optional
