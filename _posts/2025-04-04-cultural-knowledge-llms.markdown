@@ -5,9 +5,9 @@ date: 2025-03-02 00:00:00 +0000
 image: /images/cultural-llms.png  # optional
 categories: research
 author: "Drishti Sharma"
-authors: "<strong>Drishti Sharma</strong> et al."
+authors: "Ram Mohan Rao Kadiyala, Siddartha Pullakhandam, Siddhant Gupta, <strong>Drishti Sharma</strong>, Jebish Purbey, Kanwal Mehreen, Muhammad Arham, Hamza Farooq"
 venue: "ACL 2025 (Submitted)"
-link: https://your-paper-link.com  # optional
+link: https://arxiv.org/pdf/2504.09753  # optional
 code: https://github.com/your-org/cultural-llms  # optional
 excerpt: "This work investigates the impact of cultural and local knowledge on improving multilingual LLM performance by instruction-tuning seven open-source models using a dataset of 485,000 culturally-informed English-Hindi instruction pairs spanning social norms, local customs, regional metaphors, and daily linguistic context. The study demonstrates consistent improvements in translation quality, instruction alignment, and cultural contextuality, with evaluations conducted on both standard multilingual benchmarks and custom regional knowledge probes. It also highlights the shortcomings of generic pretraining in handling culturally sensitive reasoning, emphasizing the value of localized, bilingual instruction tuning in enhancing cross-cultural fluency in language models."
 ---
