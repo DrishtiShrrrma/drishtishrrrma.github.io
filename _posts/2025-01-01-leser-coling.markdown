@@ -9,7 +9,7 @@ authors: "Jebish Purbey, <strong>Drishti Sharma</strong>, Siddhant Gupta, Khawaj
 venue: "COLING 2025 (RegNLP Track, 4th Place)"
 link: https://your-paper-link.com  # replace with actual paper link
 code: https://github.com/your-org/leser  # optional
-excerpt: "A hybrid semantic-lexical retrieval pipeline for regulatory QA, achieving top performance in COLING 2025 RegNLP track."
+excerpt: "This work introduces LeSeR (Lexical Reranking of Semantic Retrieval), a hybrid retrieval approach that combines dense semantic retrieval—using fine-tuned embedding models on query-passage pairs—with a second-stage reranking via BM25, a classical lexical retrieval method. This decoupled two-stage pipeline enhances both recall and precision, outperforming standalone dense or lexical methods. Multiple embedding models, including Stella, BGE, CDE, and MPNet, were fine-tuned using Multiple Negative Symmetric Ranking (MNSR) Loss, with BGE_MNSR integrated into LeSeR (BGE_LeSeR) yielding the best retrieval performance, achieving Recall@10 of 0.8201 and mAP@10 of 0.6655. For answer generation, the optimal combination was BGE_LeSeR paired with Qwen2.5 7B, attaining the highest RePASs score of 0.4340, reflecting strong performance in entailment, obligation coverage, and minimal contradiction."
 ---
 
 This work introduces **LeSeR** (Lexical Reranking of Semantic Retrieval), a hybrid method that first performs dense semantic retrieval using fine-tuned embedding models on query-passage pairs, and then reranks the results using BM25, a classical lexical retrieval algorithm.
