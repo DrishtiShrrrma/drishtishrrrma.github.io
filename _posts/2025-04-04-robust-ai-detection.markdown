@@ -5,7 +5,7 @@ date: 2025-03-01 00:00:00 +0000
 image: /images/ai-detection.png  # optional
 categories: research
 author: "Drishti Sharma"
-authors: "<strong>Drishti Sharma</strong> et al."
+authors: "Ram Mohan Rao Kadiyala, Siddartha Pullakhandam, Kanwal Mehreen, <strong>Drishti Sharma</strong>, Siddhant Gupta, Jebish Purbey, Ashay Srivastava, Subhasya TippaReddy, Arvind Reddy Bobbili, Suraj Telugara Chandrashekhar, Modabbir Adeeb, Srinadh Vura, Hamza Farooq"
 venue: "ACL 2025 (Submitted)"
 link: https://arxiv.org/abs/2504.11952  # optional
 code: https://github.com/your-org/ai-detection  # optional
