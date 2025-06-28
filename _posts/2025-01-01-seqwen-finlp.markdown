@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sequential Learning for Claim Verification and Explanation in Financial Domains"
-date: 2025-10-10 00:00:00 +0000
+date: 2025-01-10 00:00:00 +0000
 image: /images/seqwen.png  # optional thumbnail
 categories: research
 authors: "Jebish Purbey, Siddhant Gupta, Nikhil Manali, Siddartha Pullakhandam, <strong>Drishti Sharma</strong>, Ashay Srivastava, Ram Mohan Rao Kadiyala"
