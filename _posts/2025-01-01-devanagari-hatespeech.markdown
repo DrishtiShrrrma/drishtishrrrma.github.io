@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Detection of Language, Hate Speech, and Targets using LLMs in Devanagari Script"
-date: 2025-10-05 00:00:00 +0000
+date: 2025-01-15 00:00:00 +0000
 image: /images/devanagari-hatespeech.png  # optional image
 categories: research
 authors: "Jebish Purbey, Siddartha Pullakhandam, Kanwal Mehreen, Muhammad Arham, <strong>Drishti Sharma</strong>, Ashay Srivastava, Ram Mohan Rao Kadiyala"
