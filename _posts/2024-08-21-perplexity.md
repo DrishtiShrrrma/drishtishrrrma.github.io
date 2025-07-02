@@ -4,7 +4,7 @@ title: "Perplexity vs Evaluation: A Quantitative Study"
 date: 2024-08-21 00:00:00 +0000
 image: /images/perplexity.png
 categories: other
-authors: "Aflah Ahmed, Shayekh, Ahmad Anis, <strong>Drishti Sharma</strong>"
+authors: "Mohammad Aflah Khan, Sharad Duwal, Roshan Santhosh, Girish, Shayekh, <strong>Drishti Sharma</strong>, Henok, Kamya, Nandini, Harshita, Timothy"
 link: https://huggingface.co/perplexity-v-model-perf-eval
 code: https://github.com/aflah02/Perplexity-vs-Evaluation
 slides: https://docs.google.com/presentation/d/1mnb6YoujgCjeysoL1-0LvJfGpHguMWgG5cynwOXdjq4
