@@ -4,10 +4,11 @@ title: "Improving Multilingual Capabilities with Cultural and Local Knowledge in
 date: 2025-03-02 00:00:00 +0000
 image: /images/cultural-llms.png  # optional
 categories: other
-author: "Drishti Sharma"
 authors: "Ram Mohan Rao Kadiyala, Siddartha Pullakhandam, Siddhant Gupta, <strong>Drishti Sharma</strong>, Jebish Purbey, Kanwal Mehreen, Muhammad Arham, Hamza Farooq"
-link: https://arxiv.org/pdf/2504.09753  # optional
-code: https://github.com/your-org/cultural-llms  # optional
+preprint manuscript: https://arxiv.org/pdf/2504.09753  # optional
+model: https://huggingface.co/large-traversaal/Mantra-14B
+hf demo: https://huggingface.co/spaces/large-traversaal/Mantra-14B-Demo
+user interaction log: https://huggingface.co/datasets/large-traversaal/mantra-14b-user-interaction-log
 excerpt: " This research was conducted in collaboration with [Traversaal.ai](https://traversaal.ai/) and supported through their research grant program. We fine-tuned seven open-source language models, including Qwen-2.5-14B-Instruct and Phi-4, using 485,000 culturally grounded English-Hindi instruction pairs covering regional norms, idioms, and daily context. The result: up to a 3% average improvement on multilingual benchmarks outperforming even larger models without any architectural changes or vocabulary expansion. Our work shows that lightweight, culturally informed tuning can significantly boost multilingual performance while keeping models efficient."
 ---
 
