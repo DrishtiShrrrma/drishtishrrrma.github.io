@@ -2,7 +2,7 @@
 layout: post
 title: "Synthetic Multilingual Instruction Generation for Low-Resource Languages"
 date: 2025-06-15 00:00:00 +0000
-image: /images/synthetic-llm.png  # optional; replace with actual image if available
+image: /images/synthetic-dataset.png  # optional; replace with actual image if available
 categories: other
 authors: "Desik, Roshan, Rosemary, <strong>Drishti Sharma</strong>, Gaurav, Hanif"
 dataset: https://huggingface.co/datasets/desik98/MultilingualSyntheticData
