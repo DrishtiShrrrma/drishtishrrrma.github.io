@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Evaluating Multilingual Vision-Language Reward Models"
-date: 2025-07-12 00:00:00 +0000
+date: 2025-05-12 00:00:00 +0000
 image: /images/multilingual-vl-rewardbench.png  # optional; replace with actual image path
 categories: other
 author: "Drishti Sharma"
