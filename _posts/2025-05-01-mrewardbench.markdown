@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "M-REWARDBENCH: Evaluating Reward Models in Multilingual Settings"
-date: 2025-05-01 00:00:00 +0000
+date: 2025-06-15 00:00:00 +0000
 image: /images/mrewardbench.png  # optional thumbnail image
 categories: research
 author: "Drishti Sharma"
