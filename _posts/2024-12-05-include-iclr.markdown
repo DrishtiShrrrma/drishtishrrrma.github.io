@@ -3,7 +3,7 @@ layout: post
 title: "INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge"
 date: 2025-05-05 00:00:00 +0000
 image: /images/include.png  # optional
-categories: research
+categories: [research]
 author: "Drishti Sharma"
 authors: "Angelika Romanou, Negar Foroutan, Anna Sotnikova, Zeming Chen, Sree Harsha Nelaturu, Shivalika Singh,......,<strong>Drishti Sharma</strong>,....., Marzieh Fadaee, Sara Hooker, Antoine Bosselut"
 venue: "ICLR 2025 (Spotlight)"
