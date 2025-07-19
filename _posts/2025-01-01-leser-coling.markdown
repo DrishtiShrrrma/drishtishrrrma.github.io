@@ -3,7 +3,7 @@ layout: post
 title: "Lexical Reranking of Semantic Retrieval (LeSeR) for Regulatory QA"
 date: 2025-04-15 00:00:00 +0000
 image: /images/leser.png  # optional thumbnail, update or remove if unused
-categories: research
+categories: [research]
 authors: "Jebish Purbey, <strong>Drishti Sharma</strong>, Siddhant Gupta, Khawaja Murad, Siddartha Pullakhandam, Ram Mohan Rao Kadiyala"
 venue: "COLING 2025 (RegNLP Track, 4th Place)"
 link: https://arxiv.org/pdf/2412.06009  # replace with actual paper link
