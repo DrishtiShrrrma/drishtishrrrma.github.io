@@ -165,22 +165,24 @@
       <!-- OTHER RESEARCH PROJECTS -->
       <table class="section" style="width:100%;">
         <tr><td style="padding:2.5%;"><h2>Other Research Projects</h2></td></tr>
+        <tr><td style="padding:2.5%;">
+          {% assign others = site.posts | where: "categories", "project" | sort: "rank" %}
+          {% for post in others %}
+          <div class="project-container" style="display:flex; gap:20px; padding:2.5%; align-items:center; flex-wrap:wrap;">
+            <div style="flex-shrink:0; width:180px; display:flex; justify-content:center;">
+              <img src="{{post.image}}" style="max-width:100%; max-height:160px; border-radius:8px; object-fit:contain;" alt="{{post.title}} image">
+            </div>
+            <div style="flex:1; min-width:250px;">
+              <h3><a href="{{post.website}}" target="_blank">{{post.title}}</a></h3>
+              {{post.authors}}<br>
+              {% if post.code %}<a href="{{post.code}}" target="_blank">code</a> /{% endif %}
+              {% if post.slides %}<a href="{{post.slides}}" target="_blank">slides</a> /{% endif %}
+              <p>{{ post.excerpt }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </td></tr>
       </table>
-      {% assign others = site.posts | where: "categories", "project" | sort: "rank" %}
-      {% for post in others %}
-      <div class="project-container" style="display:flex; gap:20px; padding:2.5%; align-items:center; flex-wrap:wrap;">
-        <div style="flex-shrink:0; width:180px; display:flex; justify-content:center;">
-          <img src="{{post.image}}" style="max-width:100%; max-height:160px; border-radius:8px; object-fit:contain;" alt="{{post.title}} image">
-        </div>
-        <div style="flex:1; min-width:250px;">
-          <h3><a href="{{post.website}}" target="_blank">{{post.title}}</a></h3>
-          {{post.authors}}<br>
-          {% if post.code %}<a href="{{post.code}}" target="_blank">code</a> /{% endif %}
-          {% if post.slides %}<a href="{{post.slides}}" target="_blank">slides</a> /{% endif %}
-          <p>{{ post.excerpt }}</p>
-        </div>
-      </div>
-      {% endfor %}
 
       <!-- ACADEMIC & VOLUNTEER SERVICE -->
       <table class="section" style="width:100%;">
