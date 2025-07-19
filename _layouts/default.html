@@ -146,14 +146,16 @@
       </table>
       {% assign pubs = site.posts | where: "categories", "research" | sort: "rank" %}
       {% for post in pubs %}
-      <div style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
-        <div style="flex:0 0 180px; text-align:center;"><img src="{{post.image}}" style="width:100%; border-radius:8px;"></div>
-        <div style="flex:1;">
-          <h3><a href="{{post.link}}">{{post.title}}</a></h3>
+      <div style="display:flex; gap:20px; padding:2.5%; align-items:center; flex-wrap:wrap;">
+        <div style="flex-shrink:0; width:180px; display:flex; justify-content:center;">
+          <img src="{{post.image}}" style="max-width:100%; max-height:160px; border-radius:8px; object-fit:contain;" alt="{{post.title}} image">
+        </div>
+        <div style="flex:1; min-width:250px;">
+          <h3><a href="{{post.link}}" target="_blank">{{post.title}}</a></h3>
           {{post.authors}}<br>
           <em><span style="color:red;">{{post.venue}}</span></em><br>
-          {% if post.arxiv %}<a href="{{post.arxiv}}">arxiv</a> /{% endif %}
-          {% if post.code %}<a href="{{post.code}}">code</a> /{% endif %}
+          {% if post.arxiv %}<a href="{{post.arxiv}}" target="_blank">arxiv</a> /{% endif %}
+          {% if post.code %}<a href="{{post.code}}" target="_blank">code</a> /{% endif %}
           <p>{{ post.excerpt }}</p>
         </div>
       </div>
@@ -165,11 +167,13 @@
       </table>
       {% assign talks = site.posts | where: "categories", "talk" | sort: "rank" %}
       {% for post in talks %}
-      <div style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
-        <div style="flex:0 0 180px; text-align:center;"><img src="/tn{{post.image}}" style="width:100%; border-radius:8px;"></div>
-        <div style="flex:1;">
+      <div style="display:flex; gap:20px; padding:2.5%; align-items:center; flex-wrap:wrap;">
+        <div style="flex-shrink:0; width:180px; display:flex; justify-content:center;">
+          <img src="/tn{{post.image}}" style="max-width:100%; max-height:160px; border-radius:8px; object-fit:contain;" alt="{{post.title}} image">
+        </div>
+        <div style="flex:1; min-width:250px;">
           <h3>{{post.title}}</h3>
-          {% if post.video %}<a href="{{post.video}}">video</a> /{% endif %}
+          {% if post.video %}<a href="{{post.video}}" target="_blank">video</a> /{% endif %}
           <p>{{ post.excerpt }}</p>
         </div>
       </div>
@@ -179,15 +183,17 @@
       <table style="width:100%;">
         <tr><td style="padding:2.5%;"><h2>Other Research Projects</h2></td></tr>
       </table>
-      {% assign others = site.posts | reject: "categories", "research" | reject: "categories", "talk" | sort: "rank" %}
+      {% assign others = site.posts | where_exp:"item","item.categories contains 'project'" | sort: "rank" %}
       {% for post in others %}
-      <div class="project-container" style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
-        <div style="flex:0 0 180px; text-align:center;"><img src="{{post.image}}" style="width:100%; border-radius:8px;"></div>
-        <div style="flex:1;">
-          <h3><a href="{{post.website}}">{{post.title}}</a></h3>
+      <div class="project-container" style="display:flex; gap:20px; padding:2.5%; align-items:center; flex-wrap:wrap;">
+        <div style="flex-shrink:0; width:180px; display:flex; justify-content:center;">
+          <img src="{{post.image}}" style="max-width:100%; max-height:160px; border-radius:8px; object-fit:contain;" alt="{{post.title}} image">
+        </div>
+        <div style="flex:1; min-width:250px;">
+          <h3><a href="{{post.website}}" target="_blank">{{post.title}}</a></h3>
           {{post.authors}}<br>
-          {% if post.code %}<a href="{{post.code}}">code</a> /{% endif %}
-          {% if post.slides %}<a href="{{post.slides}}">slides</a> /{% endif %}
+          {% if post.code %}<a href="{{post.code}}" target="_blank">code</a> /{% endif %}
+          {% if post.slides %}<a href="{{post.slides}}" target="_blank">slides</a> /{% endif %}
           <p>{{ post.excerpt }}</p>
         </div>
       </div>
