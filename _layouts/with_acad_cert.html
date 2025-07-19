@@ -147,7 +147,7 @@
       {% assign pubs = site.posts | where: "categories", "research" | sort: "rank" %}
       {% for post in pubs %}
       <div style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
-        <div style="flex:0 0 180px;"><img src="{{post.image}}" style="width:100%; border-radius:8px;"></div>
+        <div style="flex:0 0 180px; text-align:center;"><img src="{{post.image}}" style="width:100%; border-radius:8px;"></div>
         <div style="flex:1;">
           <h3><a href="{{post.link}}">{{post.title}}</a></h3>
           {{post.authors}}<br>
@@ -166,7 +166,7 @@
       {% assign talks = site.posts | where: "categories", "talk" | sort: "rank" %}
       {% for post in talks %}
       <div style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
-        <div style="flex:0 0 180px;"><img src="/tn{{post.image}}" style="width:100%; border-radius:8px;"></div>
+        <div style="flex:0 0 180px; text-align:center;"><img src="/tn{{post.image}}" style="width:100%; border-radius:8px;"></div>
         <div style="flex:1;">
           <h3>{{post.title}}</h3>
           {% if post.video %}<a href="{{post.video}}">video</a> /{% endif %}
@@ -181,11 +181,13 @@
       </table>
       {% assign others = site.posts | reject: "categories", "research" | reject: "categories", "talk" | sort: "rank" %}
       {% for post in others %}
-      <div style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
-        <div style="flex:0 0 180px;"><img src="{{post.image}}" style="width:100%; border-radius:8px;"></div>
+      <div class="project-container" style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
+        <div style="flex:0 0 180px; text-align:center;"><img src="{{post.image}}" style="width:100%; border-radius:8px;"></div>
         <div style="flex:1;">
-          <h3>{{post.title}}</h3>
-          {% if post.website %}<a href="{{post.website}}">website</a> /{% endif %}
+          <h3><a href="{{post.website}}">{{post.title}}</a></h3>
+          {{post.authors}}<br>
+          {% if post.code %}<a href="{{post.code}}">code</a> /{% endif %}
+          {% if post.slides %}<a href="{{post.slides}}">slides</a> /{% endif %}
           <p>{{ post.excerpt }}</p>
         </div>
       </div>
