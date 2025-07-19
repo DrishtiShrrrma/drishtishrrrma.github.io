@@ -141,7 +141,7 @@
             <td style="padding:2.5%;width:100%;vertical-align:middle">
 
       <!-- SELECTED PUBLICATIONS -->
-      <table style="width:100%;">
+      <table class="section" style="width:100%;">
         <tr><td style="padding:2.5%;"><h2>Selected Publications</h2></td></tr>
       </table>
       {% assign pubs = site.posts | where: "categories", "research" | sort: "rank" %}
@@ -161,29 +161,12 @@
       </div>
       {% endfor %}
 
-      <!-- TALKS -->
-      <table style="width:100%;">
-        <tr><td style="padding:2.5%;"><h2>Talks</h2></td></tr>
-      </table>
-      {% assign talks = site.posts | where: "categories", "talk" | sort: "rank" %}
-      {% for post in talks %}
-      <div style="display:flex; gap:20px; padding:2.5%; align-items:center; flex-wrap:wrap;">
-        <div style="flex-shrink:0; width:180px; display:flex; justify-content:center;">
-          <img src="/tn{{post.image}}" style="max-width:100%; max-height:160px; border-radius:8px; object-fit:contain;" alt="{{post.title}} image">
-        </div>
-        <div style="flex:1; min-width:250px;">
-          <h3>{{post.title}}</h3>
-          {% if post.video %}<a href="{{post.video}}" target="_blank">video</a> /{% endif %}
-          <p>{{ post.excerpt }}</p>
-        </div>
-      </div>
-      {% endfor %}
 
       <!-- OTHER RESEARCH PROJECTS -->
-      <table style="width:100%;">
+      <table class="section" style="width:100%;">
         <tr><td style="padding:2.5%;"><h2>Other Research Projects</h2></td></tr>
       </table>
-      {% assign others = site.posts | where_exp:"item","item.categories contains 'project'" | sort: "rank" %}
+      {% assign others = site.posts | where: "categories", "project" | sort: "rank" %}
       {% for post in others %}
       <div class="project-container" style="display:flex; gap:20px; padding:2.5%; align-items:center; flex-wrap:wrap;">
         <div style="flex-shrink:0; width:180px; display:flex; justify-content:center;">
@@ -200,7 +183,7 @@
       {% endfor %}
 
       <!-- ACADEMIC & VOLUNTEER SERVICE -->
-      <table style="width:100%;">
+      <table class="section" style="width:100%;">
         <tr><td style="padding:2.5%;"><h2>Academic & Volunteer Service</h2>
           <ul>
             <li>Reviewer — <a href="https://aclrollingreview.org" target="_blank">ACL ARR (Dec 2024)</a>, <a href="https://coling2024.org" target="_blank">COLING 2025</a>, <a href="https://2023.emnlp.org" target="_blank">EMNLP 2023</a></li>
@@ -210,7 +193,7 @@
       </table>
 
       <!-- CERTIFICATES & COURSES -->
-      <table style="width:100%;">
+      <table class="section" style="width:100%;">
         <tr><td style="padding:2.5%;"><h2>Certificates & Courses</h2>
           <ul>
             <li><a href="https://coursera.org/verify/some-id" target="_blank">Deep Learning Specialization — Andrew Ng (Coursera)</a></li>
