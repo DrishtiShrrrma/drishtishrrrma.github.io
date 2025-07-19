@@ -141,119 +141,83 @@
             <td style="padding:2.5%;width:100%;vertical-align:middle">
 
       <!-- SELECTED PUBLICATIONS -->
-      <table style="width:100%;margin:auto;">
-        <tr>
-          <td style="padding:2.5%;">
-            <h2>Selected Publications</h2>
-          </td>
-        </tr>
+      <table style="width:100%;">
+        <tr><td style="padding:2.5%;"><h2>Selected Publications</h2></td></tr>
       </table>
-
-      <table style="width:100%;margin:auto;">
-        {% for post in site.posts %}
-        {% if post.categories contains 'research' %}
-        <tr>
-          <td style="padding:2.5%;">
-            <div class="project-container">
-              <div class="project-image">
-                <img src="{{post.image}}" alt="project image" style="width:100%;" />
-              </div>
-              <div class="project-text">
-                <h3><a href="{{post.link}}">{{post.title}}</a></h3>
-                {{post.authors}}<br>
-                <em><span style="color:red;">{{post.venue}}</span></em>, {{ post.date | date: "%Y" }}<br>
-
-                {% if post.arxiv %}<a href="{{post.arxiv}}">arxiv</a> /{% endif %}
-                {% if post.video %}<a href="{{post.video}}">video</a> /{% endif %}
-                {% if post.code %}<a href="{{post.code}}">code</a> /{% endif %}
-                {% if post.poster %}<a href="{{post.poster}}">poster</a> /{% endif %}
-                {% if post.slides %}<a href="{{post.slides}}">slides</a> /{% endif %}
-                {% if post.website %}<a href="{{post.website}}">website</a> /{% endif %}
-                {% if post.youtube %}<a href="{{post.youtube}}">youtube</a> /{% endif %}
-
-                <p>{{ post.excerpt }}</p>
-              </div>
-            </div>
-          </td>
-        </tr>
-        {% endif %}
-        {% endfor %}
-      </table>
+      {% assign pubs = site.posts | where: "categories", "research" | sort: "rank" %}
+      {% for post in pubs %}
+      <div style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
+        <div style="flex:0 0 180px;"><img src="{{post.image}}" style="width:100%; border-radius:8px;"></div>
+        <div style="flex:1;">
+          <h3><a href="{{post.link}}">{{post.title}}</a></h3>
+          {{post.authors}}<br>
+          <em><span style="color:red;">{{post.venue}}</span></em><br>
+          {% if post.arxiv %}<a href="{{post.arxiv}}">arxiv</a> /{% endif %}
+          {% if post.code %}<a href="{{post.code}}">code</a> /{% endif %}
+          <p>{{ post.excerpt }}</p>
+        </div>
+      </div>
+      {% endfor %}
 
       <!-- TALKS -->
-      <table style="width:100%;margin:auto;">
-        {% for post in site.posts %}
-        {% if post.categories contains 'talk' %}
-        <tr>
-          <td style="padding:2.5%;">
-            <div class="project-container">
-              <div class="project-image">
-                <img src="/tn{{post.image}}" alt="project image" style="width:100%;" />
-              </div>
-              <div class="project-text">
-                <h3>{{post.title}}</h3>
+      <table style="width:100%;">
+        <tr><td style="padding:2.5%;"><h2>Talks</h2></td></tr>
+      </table>
+      {% assign talks = site.posts | where: "categories", "talk" | sort: "rank" %}
+      {% for post in talks %}
+      <div style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
+        <div style="flex:0 0 180px;"><img src="/tn{{post.image}}" style="width:100%; border-radius:8px;"></div>
+        <div style="flex:1;">
+          <h3>{{post.title}}</h3>
+          {% if post.video %}<a href="{{post.video}}">video</a> /{% endif %}
+          <p>{{ post.excerpt }}</p>
+        </div>
+      </div>
+      {% endfor %}
 
-                {% if post.website %}<a href="{{post.website}}">website</a> /{% endif %}
-                {% if post.paper %}<a href="{{post.paper}}">paper</a> /{% endif %}
-                {% if post.patent %}<a href="{{post.patent}}">patent</a> /{% endif %}
-                {% if post.video %}<a href="{{post.video}}">video</a> /{% endif %}
-                {% if post.code %}<a href="{{post.code}}">code</a> /{% endif %}
-                {% if post.poster %}<a href="{{post.poster}}">poster</a> /{% endif %}
-                {% if post.slides %}<a href="{{post.slides}}">slides</a> /{% endif %}
+      <!-- OTHER RESEARCH PROJECTS -->
+      <table style="width:100%;">
+        <tr><td style="padding:2.5%;"><h2>Other Research Projects</h2></td></tr>
+      </table>
+      {% assign others = site.posts | reject: "categories", "research" | reject: "categories", "talk" | sort: "rank" %}
+      {% for post in others %}
+      <div style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
+        <div style="flex:0 0 180px;"><img src="{{post.image}}" style="width:100%; border-radius:8px;"></div>
+        <div style="flex:1;">
+          <h3>{{post.title}}</h3>
+          {% if post.website %}<a href="{{post.website}}">website</a> /{% endif %}
+          <p>{{ post.excerpt }}</p>
+        </div>
+      </div>
+      {% endfor %}
 
-                <p>{{ post.excerpt }}</p>
-              </div>
-            </div>
-          </td>
-        </tr>
-        {% endif %}
-        {% endfor %}
+      <!-- ACADEMIC & VOLUNTEER SERVICE -->
+      <table style="width:100%;">
+        <tr><td style="padding:2.5%;"><h2>Academic & Volunteer Service</h2>
+          <ul>
+            <li>Reviewer — <a href="https://aclrollingreview.org" target="_blank">ACL ARR (Dec 2024)</a>, <a href="https://coling2024.org" target="_blank">COLING 2025</a>, <a href="https://2023.emnlp.org" target="_blank">EMNLP 2023</a></li>
+            <li>Organizer — <a href="https://pml4dc.github.io/iclr2024/" target="_blank">PML4LRS @ ICLR 2024</a></li>
+          </ul>
+        </td></tr>
       </table>
 
-      <!-- OTHER PROJECTS -->
-      <table style="width:100%;margin:auto;">
-        <tr>
-          <td style="padding:2.5%;">
-            <h2>Other Research Projects</h2>
-            <p>These include side projects and unpublished research work. </p>
-          </td>
-        </tr>
-        {% for post in site.posts %}
-        {% if post.categories contains 'project' or post.categories contains 'misc' %}
-        <tr>
-          <td style="padding:2.5%;">
-            <div class="project-container">
-              <div class="project-image">
-                <img src="{{post.image}}" alt="project image" style="width:100%;" />
-              </div>
-              <div class="project-text">
-                <h3>{{post.title}}</h3>
-
-                {% if post.website %}<a href="{{post.website}}">website</a> /{% endif %}
-                {% if post.paper %}<a href="{{post.paper}}">paper</a> /{% endif %}
-                {% if post.code %}<a href="{{post.code}}">code</a> /{% endif %}
-                {% if post.poster %}<a href="{{post.poster}}">poster</a> /{% endif %}
-                {% if post.slides %}<a href="{{post.slides}}">slides</a> /{% endif %}
-
-                <p>{{ post.excerpt }}</p>
-              </div>
-            </div>
-          </td>
-        </tr>
-        {% endif %}
-        {% endfor %}
+      <!-- CERTIFICATES & COURSES -->
+      <table style="width:100%;">
+        <tr><td style="padding:2.5%;"><h2>Certificates & Courses</h2>
+          <ul>
+            <li><a href="https://coursera.org/verify/some-id" target="_blank">Deep Learning Specialization — Andrew Ng (Coursera)</a></li>
+            <li><a href="https://course.fast.ai/dataethics/" target="_blank">Data Ethics & Fairness — fast.ai</a></li>
+            <li><a href="https://cohere.ai/blog/llm-university-cohere" target="_blank">LLM Bootcamp — Cohere for AI</a></li>
+          </ul>
+        </td></tr>
       </table>
 
       <!-- FOOTER -->
-      <table style="width:100%;margin:auto;">
-        <tr>
-          <td style="padding:0px">
-            <br>
-            <p style="text-align:center;font-size:small;">
-              Design and source code on lease from <a href="https://jonbarron.info">Jon Barron's website</a>
-            </p>
-          </td>
-        </tr>
+      <table style="width:100%;">
+        <tr><td style="padding:0px; text-align:center; font-size:small;">
+          <br>
+          Design and source code on lease from <a href="https://jonbarron.info">Jon Barron</a>
+        </td></tr>
       </table>
 
     </td></tr>
