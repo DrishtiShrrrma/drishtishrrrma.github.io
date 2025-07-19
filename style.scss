@@ -111,3 +111,22 @@ span.highlight {
   border-top: 1px solid #ccc;
 }
 
+.project-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 2em;
+}
+
+.project-image {
+  flex: 0 0 180px; /* fixed image width */
+  max-width: 180px;
+}
+
+.project-text {
+  flex: 1;
+  text-align: justify;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
