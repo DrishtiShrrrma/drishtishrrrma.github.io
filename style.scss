@@ -119,7 +119,7 @@ span.highlight {
 }
 
 .project-image {
-  flex: 0 0 180px; /* fixed image width */
+  flex: 0 0 180px;
   max-width: 180px;
 }
 
@@ -128,5 +128,9 @@ span.highlight {
   text-align: justify;
   font-size: 14px;
   line-height: 1.6;
+}
+
+.project-text p {
+  text-align: justify; /* extra safety */
 }
 
