@@ -4,7 +4,7 @@ title: "Street Art Analysis and Cultural Mapping with Vision-Language Models"
 date: 2025-07-13 00:00:00 +0000
 image: /images/street-art-analysis.png  # optional; replace with your actual image
 categories: other
-rank: 6
+rank: 10
 author: "Drishti Sharma"
 authors: "Alice, Kushal, <strong>Drishti Sharma</strong>, Hazim, Vatsal, Abigail"
 slides: https://docs.google.com/presentation/d/1ScMS63Uvua5-DlCYPiNFyfDcphgom0CQ/edit?slide=id.g65dfd12377a7de84_0#slide=id.g65dfd12377a7de84_0
