@@ -1,1 +1,10 @@
 My work spans the design, optimization, alignment, and evaluation of LLMs and VLMs; evaluation metric analysis and validation; audio deep learning; reinforcement learning; and AI ethics and fairness. 
+
+
+
+I'm currently working as an independent researcher, primarily contributing to projects at Cohere Labs and Traversaal AI. My work spans the design, optimization, alignment, and evaluation of LLMs and VLMs; evaluation metric analysis and validation; audio deep learning; reinforcement learning; and AI ethics and fairness. Currently, I'm actively involved in building a spatially-aware VLM, evaluating biomedical model merging techniques and multilingual code summarization. 
+
+Previously, I spent nearly four years as an Intellectual Property (IP) researcher, analyzing inventions related to antennas, wireless charging systems, user experience devices, and audio technologies - all at the intersection of electronics and AI. My foundation in electronics and communication engineering continues to guide my work in areas like Audio Signal Processing and Computer Vision.
+
+You can find an overview of my work here:
+👉 https://drishtishrrrma.github.io/
