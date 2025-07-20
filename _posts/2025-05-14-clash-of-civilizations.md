@@ -4,6 +4,7 @@ title: "Clash of Civilizations: Exploring Political Bias in LLMs Across Language
 date: 2025-05-14 00:00:00 +0000
 image: /images/clash-of-civilizations.png  # optional; replace with your actual image
 categories: other
+rank: 4
 author: "Drishti Sharma"
 authors: "Alfonso Amayuelas, Manuel Tonneau, Ashay Srivastava, Drishti Sharma, Efstathios Siatras, Antonina Sinelnik, Avneet Kaur, Guneet"
 slide: https://docs.google.com/presentation/d/1A3vLm1RNmnBtBdJYgXZntU9sG8aF5iIM/edit?slide=id.p1#slide=id.p1
