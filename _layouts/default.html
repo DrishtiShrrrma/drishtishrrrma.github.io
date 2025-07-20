@@ -159,21 +159,6 @@
       </div>
       {% endfor %}
 
-      <!-- TALKS -->
-      <table style="width:100%;">
-        <tr><td style="padding:2.5%;"><h2>Talks</h2></td></tr>
-      </table>
-      {% assign talks = site.posts | where: "categories", "talk" | sort: "rank" %}
-      {% for post in talks %}
-      <div style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
-        <div style="flex:0 0 180px; text-align:center;"><img src="/tn{{post.image}}" style="width:100%; border-radius:8px;"></div>
-        <div style="flex:1;">
-          <h3>{{post.title}}</h3>
-          {% if post.video %}<a href="{{post.video}}">video</a> /{% endif %}
-          <p>{{ post.excerpt }}</p>
-        </div>
-      </div>
-      {% endfor %}
 
       <!-- OTHER RESEARCH PROJECTS -->
       <table style="width:100%;">
