@@ -6,7 +6,7 @@ image: /images/perplexity.png
 categories: [other]
 rank: 3
 author: Drishti Sharma
-authors: "Mohammad Aflah Khan, Sharad Duwal, Roshan Santhosh, Girish, Shayekh, <strong>Drishti Sharma</strong>, Henok, Kamya, Nandini, Harshita, Timothy"
+authors: "Aflah Khan, Sharad Duwal, Roshan Santhosh, Girish, Shayekh, <strong>Drishti Sharma</strong>, Henok, Kamya, Nandini, Harshita, Timothy"
 link: https://huggingface.co/perplexity-v-model-perf-eval
 code: https://github.com/aflah02/Perplexity-vs-Evaluation
 slides: https://docs.google.com/presentation/d/1mnb6YoujgCjeysoL1-0LvJfGpHguMWgG5cynwOXdjq4
