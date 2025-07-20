@@ -4,6 +4,7 @@ title: "Improving Multilingual Capabilities with Cultural and Local Knowledge in
 date: 2025-03-02 00:00:00 +0000
 image: /images/cultural-llms.png  # optional
 categories: other
+rank: 9
 authors: "Ram Mohan Rao Kadiyala, Siddartha Pullakhandam, Siddhant Gupta, <strong>Drishti Sharma</strong>, Jebish Purbey, Kanwal Mehreen, Muhammad Arham, Hamza Farooq"
 preprint manuscript: https://arxiv.org/pdf/2504.09753  # optional
 model: https://huggingface.co/large-traversaal/Mantra-14B
