@@ -4,6 +4,7 @@ title: "Adversarial AYA: Multilingual Robustness of Vision-Language Models"
 date: 2025-05-10 00:00:00 +0000
 image: /images/adversarial-aya.png  # optional
 categories: other
+rank: 2
 author: "Drishti Sharma"
 authors: "Waseem, <strong>Drishti Sharma</strong>, Srimoyee, Ahmad Mustafa, Sarthak, Vivek, Manoj"
 code: https://huggingface.co/datasets/hwaseem04/Aya-testing
