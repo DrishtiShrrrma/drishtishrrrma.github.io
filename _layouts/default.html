@@ -138,8 +138,8 @@
             <td style="padding:2.5%;width:100%;vertical-align:middle">
 
       <!-- SELECTED PUBLICATIONS -->
-      <table style="width:100%;">
-        <tr><td style="padding:2.5%;"><h2 style="margin-bottom:0.5em;">Selected Publications</h2></td></tr>
+      <table style="width:100%; margin-top:2em;">
+        <h2 style="margin-bottom:0.5em;">Selected Publications</h2>
       </table>
       {% assign pubs = site.posts | where_exp: "item", "item.categories contains 'research'" %}
       {% assign pubs = pubs | reject: "categories", "other" | reject: "categories", "others" | sort: "rank" %}
