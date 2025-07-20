@@ -142,12 +142,12 @@
 
       <!-- SELECTED PUBLICATIONS -->
       <table style="width:100%;">
-        <tr><td style="padding:2.5%;"><h2>Selected Publications</h2></td></tr>
+        <tr><td style="padding:2.5%;"><h2 style="margin-bottom:0.5em;">Selected Publications</h2></td></tr>
       </table>
       {% assign pubs = site.posts | where_exp: "item", "item.categories contains 'research'" %}
       {% assign pubs = pubs | reject: "categories", "other" | reject: "categories", "others" | sort: "rank" %}
       {% for post in pubs %}
-      <div style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
+      <div style="display:flex; gap:20px; margin-bottom:1.5em; align-items:flex-start; flex-wrap:wrap;">
         <div style="flex:0 0 180px; text-align:center;"><img src="{{post.image}}" style="width:100%; border-radius:8px;"></div>
         <div style="flex:1;">
           <h3><a href="{{post.link}}">{{post.title}}</a></h3>
@@ -169,7 +169,7 @@
       {% assign others = others_1 | concat: others_2 %}
       {% assign others = others | reject: "categories", "research" | sort: "rank" %}
       {% for post in others %}
-      <div class="project-container" style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
+      <div class="project-container" style="display:flex; gap:20px; margin-bottom:1.5em; align-items:flex-start; flex-wrap:wrap;">
         <div style="flex:0 0 180px; text-align:center;"><img src="{{post.image}}" style="width:100%; border-radius:8px;"></div>
         <div style="flex:1;">
           <h3><a href="{{post.website}}">{{post.title}}</a></h3>
