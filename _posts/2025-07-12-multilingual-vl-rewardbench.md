@@ -4,6 +4,7 @@ title: "Evaluating Multilingual Vision-Language Reward Models"
 date: 2025-05-12 00:00:00 +0000
 image: /images/multilingual-vl-rewardbench.png  # optional; replace with actual image path
 categories: other
+rank: 1
 author: "Drishti Sharma"
 authors: "Shayekh Bin Islam, Dipika Khullar, Gusti Winata, <strong>Drishti Sharma</strong>, Rishabh Maheshwary, Guneet"
 slides: https://docs.google.com/presentation/d/1hVyR2VpQAeEXH6d5NtPhcqhPSYd9j2tCs7rsvXCSzFA/edit?slide=id.g35bc74692fd_0_0#slide=id.g35bc74692fd_0_0
