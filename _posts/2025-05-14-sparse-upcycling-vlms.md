@@ -4,6 +4,7 @@ title: "Sparse Upcycling VLMs: Efficient Multilingual Adaptation from Dense Mode
 date: 2025-04-01 00:00:00 +0000
 image: /images/sparse-upcycling.png  # optional
 categories: other
+rank: 3
 author: "Drishti Sharma"
 authors: "Mayank, Trishanu, Alvin, Ahmad, Shivam, <strong>Drishti</strong>, Alper, Shayekh"
 slides: https://docs.google.com/presentation/d/1nBIqb9M-Oa5zlDJ3op1MR8vBBUw5-k6YMO6j66cKJgQ/edit?slide=id.g146d9451f85_1_445#slide=id.g146d9451f85_1_445
