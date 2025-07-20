@@ -4,6 +4,7 @@ title: "Knowledge Explorer: Education for All"
 date: 2025-05-01 00:00:00 +0000
 image: /images/knowledge-explorer.png  # optional
 categories: other
+rank: 6
 author: "Drishti Sharma"
 authors: "Azmine Toushik Wasi, Mahfuz Ahmed Anik, Wahid Faisal, <strong>Drishti Sharma</strong>"
 venue: "Cohere Labs Community Showcase (2025)"
