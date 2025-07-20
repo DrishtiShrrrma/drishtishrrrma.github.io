@@ -144,9 +144,7 @@
         <table style="width:100%;">
           <tr><td style="padding:2.5%;"><h2>Selected Publications</h2></td></tr>
         </table>
-        {% assign pubs = site.posts 
-          | where_exp: "item", "item.categories contains 'research' and item.categories contains 'other' == false and item.categories contains 'others' == false" 
-          | sort: "rank" %}
+        {% assign pubs = site.posts | where_exp: "item", "item.categories contains 'research' and not item.categories contains 'other' and not item.categories contains 'others'" | sort: "rank" %}
         {% for post in pubs %}
         <div style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
           <div style="flex:0 0 180px; text-align:center;"><img src="{{post.image}}" style="width:100%; border-radius:8px;"></div>
@@ -165,9 +163,7 @@
         <table style="width:100%;">
           <tr><td style="padding:2.5%;"><h2>Other Research Projects</h2></td></tr>
         </table>
-        {% assign others = site.posts 
-          | where_exp: "item", "(item.categories contains 'other' or item.categories contains 'others') and item.categories contains 'research' == false" 
-          | sort: "rank" %}
+        {% assign others = site.posts | where_exp: "item", "(item.categories contains 'other' or item.categories contains 'others') and not item.categories contains 'research'" | sort: "rank" %}
         {% for post in others %}
         <div class="project-container" style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
           <div style="flex:0 0 180px; text-align:center;"><img src="{{post.image}}" style="width:100%; border-radius:8px;"></div>
