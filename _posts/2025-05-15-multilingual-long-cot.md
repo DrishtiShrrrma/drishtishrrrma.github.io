@@ -4,6 +4,7 @@ title: "Multilingual Long Chain-of-Thoughts with Small Reasoning Models"
 date: 2025-05-15 00:00:00 +0000
 image: /images/multilingual-long-cot.png  # optional
 categories: other
+rank: 6
 author: "Drishti Sharma"
 authors: "Swati Rajwal, Shayekh Islam, Marek Suppa, <strong>Drishti Sharma</strong>, Azmine Toushik, Yadnyesh C., Morteza Kashani, Allison Yang, Ira Salsabila"
 code: https://github.com/Multilingual-long-COT
