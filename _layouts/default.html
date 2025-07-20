@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <html lang="en">
-
  
 <head>
   <!-- Google tag (gtag.js) -->
@@ -141,68 +140,89 @@
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
 
-    <!-- SELECTED PUBLICATIONS -->
-    <section>
-      <h2>Selected Publications</h2>
-      {% assign pubs = site.posts | where_exp: "post", "post.categories contains 'research'" | sort: "rank" %}
+      <!-- SELECTED PUBLICATIONS -->
+      <table style="width:100%;">
+        <tr><td style="padding:2.5%;"><h2>Selected Publications</h2></td></tr>
+      </table>
+      {% assign pubs = site.posts | where: "categories", "research" | sort: "rank" %}
       {% for post in pubs %}
-      <div class="project-container">
-        <div class="project-image"><img src="{{ post.image }}" style="width:100%; border-radius:8px;" alt="project image"></div>
-        <div class="project-text">
-          <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
-          <p>{{ post.authors }}</p>
-          {% if post.venue %}<p><em style="color:red;">{{ post.venue }}</em></p>{% endif %}
-          {% if post.arxiv %}<a href="{{ post.arxiv }}">arXiv</a> / {% endif %}
-          {% if post.code %}<a href="{{ post.code }}">Code</a> / {% endif %}
-          {% if post.poster %}<a href="{{ post.poster }}">Poster</a> / {% endif %}
+      <div style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
+        <div style="flex:0 0 180px; text-align:center;"><img src="{{post.image}}" style="width:100%; border-radius:8px;"></div>
+        <div style="flex:1;">
+          <h3><a href="{{post.link}}">{{post.title}}</a></h3>
+          {{post.authors}}<br>
+          <em><span style="color:red;">{{post.venue}}</span></em><br>
+          {% if post.arxiv %}<a href="{{post.arxiv}}">arxiv</a> /{% endif %}
+          {% if post.code %}<a href="{{post.code}}">code</a> /{% endif %}
           <p>{{ post.excerpt }}</p>
         </div>
       </div>
       {% endfor %}
-    </section>
 
-    <!-- OTHER PROJECTS -->
-    <section>
-      <h2>Other Research Projects</h2>
-      {% assign others = site.posts | where_exp: "post", "(post.categories contains 'research') == false and (post.categories contains 'talk') == false" | sort: "rank" %}
+      <!-- TALKS -->
+      <table style="width:100%;">
+        <tr><td style="padding:2.5%;"><h2>Talks</h2></td></tr>
+      </table>
+      {% assign talks = site.posts | where: "categories", "talk" | sort: "rank" %}
+      {% for post in talks %}
+      <div style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
+        <div style="flex:0 0 180px; text-align:center;"><img src="/tn{{post.image}}" style="width:100%; border-radius:8px;"></div>
+        <div style="flex:1;">
+          <h3>{{post.title}}</h3>
+          {% if post.video %}<a href="{{post.video}}">video</a> /{% endif %}
+          <p>{{ post.excerpt }}</p>
+        </div>
+      </div>
+      {% endfor %}
+
+      <!-- OTHER RESEARCH PROJECTS -->
+      <table style="width:100%;">
+        <tr><td style="padding:2.5%;"><h2>Other Research Projects</h2></td></tr>
+      </table>
+      {% assign others = site.posts | reject: "categories", "research" | reject: "categories", "talk" | sort: "rank" %}
       {% for post in others %}
-      <div class="project-container">
-        <div class="project-image"><img src="{{ post.image }}" style="width:100%; border-radius:8px;" alt="project image"></div>
-        <div class="project-text">
-          <h3><a href="{{ post.website | default: post.link }}">{{ post.title }}</a></h3>
-          <p>{{ post.authors }}</p>
-          {% if post.code %}<a href="{{ post.code }}">Code</a> / {% endif %}
-          {% if post.slides %}<a href="{{ post.slides }}">Slides</a> / {% endif %}
+      <div class="project-container" style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
+        <div style="flex:0 0 180px; text-align:center;"><img src="{{post.image}}" style="width:100%; border-radius:8px;"></div>
+        <div style="flex:1;">
+          <h3><a href="{{post.website}}">{{post.title}}</a></h3>
+          {{post.authors}}<br>
+          {% if post.code %}<a href="{{post.code}}">code</a> /{% endif %}
+          {% if post.slides %}<a href="{{post.slides}}">slides</a> /{% endif %}
           <p>{{ post.excerpt }}</p>
         </div>
       </div>
       {% endfor %}
-    </section>
 
-    <!-- SERVICE -->
-    <section>
-      <h2>Academic & Volunteer Service</h2>
-      <ul>
-        <li>Reviewer — ACL ARR (Dec 2024), COLING 2025, EMNLP 2023</li>
-        <li>Organizer — PML4LRS @ ICLR 2024</li>
-      </ul>
-    </section>
+      <!-- ACADEMIC & VOLUNTEER SERVICE -->
+      <table style="width:100%;">
+        <tr><td style="padding:2.5%;"><h2>Academic & Volunteer Service</h2>
+          <ul>
+            <li>Reviewer — <a href="https://aclrollingreview.org" target="_blank">ACL ARR (Dec 2024)</a>, <a href="https://coling2024.org" target="_blank">COLING 2025</a>, <a href="https://2023.emnlp.org" target="_blank">EMNLP 2023</a></li>
+            <li>Organizer — <a href="https://pml4dc.github.io/iclr2024/" target="_blank">PML4LRS @ ICLR 2024</a></li>
+          </ul>
+        </td></tr>
+      </table>
 
-    <!-- COURSES -->
-    <section>
-      <h2>Certificates & Courses</h2>
-      <ul>
-        <li><a href="#">Deep Learning Specialization — Andrew Ng (Coursera)</a></li>
-        <li><a href="#">Data Ethics & Fairness — fast.ai</a></li>
-        <li><a href="#">LLM Bootcamp — Cohere for AI</a></li>
-      </ul>
-    </section>
+      <!-- CERTIFICATES & COURSES -->
+      <table style="width:100%;">
+        <tr><td style="padding:2.5%;"><h2>Certificates & Courses</h2>
+          <ul>
+            <li><a href="https://coursera.org/verify/some-id" target="_blank">Deep Learning Specialization — Andrew Ng (Coursera)</a></li>
+            <li><a href="https://course.fast.ai/dataethics/" target="_blank">Data Ethics & Fairness — fast.ai</a></li>
+            <li><a href="https://cohere.ai/blog/llm-university-cohere" target="_blank">LLM Bootcamp — Cohere for AI</a></li>
+          </ul>
+        </td></tr>
+      </table>
 
-    <!-- FOOTER -->
-    <footer style="text-align:center; font-size:small; margin-top:3em;">
-      Design inspired by <a href="https://jonbarron.info">Jon Barron</a>
-    </footer>
+      <!-- FOOTER -->
+      <table style="width:100%;">
+        <tr><td style="padding:0px; text-align:center; font-size:small;">
+          <br>
+          Design and source code on lease from <a href="https://jonbarron.info">Jon Barron</a>
+        </td></tr>
+      </table>
 
-  </main>
+    </td></tr>
+  </table>
 </body>
 </html>
