@@ -1,0 +1,1 @@
+My work spans the design, optimization, alignment, and evaluation of LLMs and VLMs; evaluation metric analysis and validation; audio deep learning; reinforcement learning; and AI ethics and fairness. 
