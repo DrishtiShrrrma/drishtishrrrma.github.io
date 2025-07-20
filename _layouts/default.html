@@ -140,76 +140,77 @@
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
 
-      <!-- SELECTED PUBLICATIONS -->
-      <table style="width:100%;">
-        <tr><td style="padding:2.5%;"><h2>Selected Publications</h2></td></tr>
-      </table>
-      {% assign pubs = site.posts | where: "categories", "research" | sort: "rank" %}
-      {% for post in pubs %}
-      <div style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
-        <div style="flex:0 0 180px; text-align:center;"><img src="{{post.image}}" style="width:100%; border-radius:8px;"></div>
-        <div style="flex:1;">
-          <h3><a href="{{post.link}}">{{post.title}}</a></h3>
-          {{post.authors}}<br>
-          <em><span style="color:red;">{{post.venue}}</span></em><br>
-          {% if post.arxiv %}<a href="{{post.arxiv}}">arxiv</a> /{% endif %}
-          {% if post.code %}<a href="{{post.code}}">code</a> /{% endif %}
-          <p>{{ post.excerpt }}</p>
+        <!-- SELECTED PUBLICATIONS -->
+        <table style="width:100%;">
+          <tr><td style="padding:2.5%;"><h2>Selected Publications</h2></td></tr>
+        </table>
+        {% assign pubs = site.posts 
+          | where_exp: "item", "item.categories contains 'research' and item.categories contains 'other' == false and item.categories contains 'others' == false" 
+          | sort: "rank" %}
+        {% for post in pubs %}
+        <div style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
+          <div style="flex:0 0 180px; text-align:center;"><img src="{{post.image}}" style="width:100%; border-radius:8px;"></div>
+          <div style="flex:1;">
+            <h3><a href="{{post.link}}">{{post.title}}</a></h3>
+            {{post.authors}}<br>
+            <em><span style="color:red;">{{post.venue}}</span></em><br>
+            {% if post.arxiv %}<a href="{{post.arxiv}}">arxiv</a> /{% endif %}
+            {% if post.code %}<a href="{{post.code}}">code</a> /{% endif %}
+            <p>{{ post.excerpt }}</p>
+          </div>
         </div>
-      </div>
-      {% endfor %}
+        {% endfor %}
 
-
-      <!-- OTHER RESEARCH PROJECTS -->
-      <table style="width:100%;">
-        <tr><td style="padding:2.5%;"><h2>Other Research Projects</h2></td></tr>
-      </table>
-      {% assign others = site.posts | reject: "categories", "research" | reject: "categories", "talk" | sort: "rank" %}
-      {% for post in others %}
-      <div class="project-container" style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
-        <div style="flex:0 0 180px; text-align:center;"><img src="{{post.image}}" style="width:100%; border-radius:8px;"></div>
-        <div style="flex:1;">
-          <h3><a href="{{post.website}}">{{post.title}}</a></h3>
-          {{post.authors}}<br>
-          {% if post.code %}<a href="{{post.code}}">code</a> /{% endif %}
-          {% if post.slides %}<a href="{{post.slides}}">slides</a> /{% endif %}
-          <p>{{ post.excerpt }}</p>
+        <!-- OTHER RESEARCH PROJECTS -->
+        <table style="width:100%;">
+          <tr><td style="padding:2.5%;"><h2>Other Research Projects</h2></td></tr>
+        </table>
+        {% assign others = site.posts 
+          | where_exp: "item", "(item.categories contains 'other' or item.categories contains 'others') and item.categories contains 'research' == false" 
+          | sort: "rank" %}
+        {% for post in others %}
+        <div class="project-container" style="display:flex; gap:20px; padding:2.5%; align-items:flex-start; flex-wrap:wrap;">
+          <div style="flex:0 0 180px; text-align:center;"><img src="{{post.image}}" style="width:100%; border-radius:8px;"></div>
+          <div style="flex:1;">
+            <h3><a href="{{post.website}}">{{post.title}}</a></h3>
+            {{post.authors}}<br>
+            {% if post.code %}<a href="{{post.code}}">code</a> /{% endif %}
+            {% if post.slides %}<a href="{{post.slides}}">slides</a> /{% endif %}
+            <p>{{ post.excerpt }}</p>
+          </div>
         </div>
-      </div>
-      {% endfor %}
+        {% endfor %}
 
-      <!-- ACADEMIC & VOLUNTEER SERVICE -->
-      <table style="width:100%;">
-        <tr><td style="padding:2.5%;"><h2>Academic & Volunteer Service</h2>
-          <ul>
-            <li>Reviewer — <a href="https://aclrollingreview.org" target="_blank">ACL ARR (Dec 2024)</a>, <a href="https://coling2024.org" target="_blank">COLING 2025</a>, <a href="https://2023.emnlp.org" target="_blank">EMNLP 2023</a></li>
-            <li>Reviewer — <a href="https://2023.emnlp.org" target="_blank">EMNLP 2023</a></li>
-            <li>Reviewer — <a href="https://pml4dc.github.io/iclr2024/" target="_blank">PML4LRS @ ICLR 2024</a></li>
-          </ul>
-        </td></tr>
-      </table>
-             
+        <!-- ACADEMIC & VOLUNTEER SERVICE -->
+        <table style="width:100%;">
+          <tr><td style="padding:2.5%;"><h2>Academic & Volunteer Service</h2>
+            <ul>
+              <li>Reviewer — <a href="https://aclrollingreview.org" target="_blank">ACL ARR (Dec 2024)</a>, <a href="https://coling2024.org" target="_blank">COLING 2025</a>, <a href="https://2023.emnlp.org" target="_blank">EMNLP 2023</a></li>
+              <li>Reviewer — <a href="https://pml4dc.github.io/iclr2024/" target="_blank">PML4LRS @ ICLR 2024</a></li>
+            </ul>
+          </td></tr>
+        </table>
 
-      <!-- CERTIFICATES & COURSES -->
-      <table style="width:100%;">
-        <tr><td style="padding:2.5%;"><h2>Certificates & Courses</h2>
-          <ul>
-            <li><a href="https://credsverse.com/credentials/8edcb76d-8b55-4268-b5f9-e5a3db52a696" target="_blank">Cohere ML Summer School - Jul'25</a></li>
-            <li><a href="https://course.fast.ai/dataethics/" target="_blank">Data Ethics & Fairness — fast.ai</a></li>
-            <li><a href="https://cohere.ai/blog/llm-university-cohere" target="_blank">LLM Bootcamp — Cohere for AI</a></li>
-          </ul>
-        </td></tr>
-      </table>
+        <!-- CERTIFICATES & COURSES -->
+        <table style="width:100%;">
+          <tr><td style="padding:2.5%;"><h2>Certificates & Courses</h2>
+            <ul>
+              <li><a href="https://credsverse.com/credentials/8edcb76d-8b55-4268-b5f9-e5a3db52a696" target="_blank">Cohere ML Summer School - Jul'25</a></li>
+              <li><a href="https://course.fast.ai/dataethics/" target="_blank">Data Ethics & Fairness — fast.ai</a></li>
+              <li><a href="https://cohere.ai/blog/llm-university-cohere" target="_blank">LLM Bootcamp — Cohere for AI</a></li>
+            </ul>
+          </td></tr>
+        </table>
 
-      <!-- FOOTER -->
-      <table style="width:100%;">
-        <tr><td style="padding:0px; text-align:center; font-size:small;">
-          <br>
-          Design and source code on lease from <a href="https://jonbarron.info">Jon Barron</a>
-        </td></tr>
-      </table>
+        <!-- FOOTER -->
+        <table style="width:100%;">
+          <tr><td style="padding:0px; text-align:center; font-size:small;">
+            <br>
+            Design and source code on lease from <a href="https://jonbarron.info">Jon Barron</a>
+          </td></tr>
+        </table>
 
-    </td></tr>
+      </td></tr>
   </table>
 </body>
 </html>
