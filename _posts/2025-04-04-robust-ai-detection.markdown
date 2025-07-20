@@ -4,7 +4,7 @@ title: "Robust and Fine-Grained Detection of AI-Generated Texts"
 date: 2025-03-01 00:00:00 +0000
 image: /images/ai-detection.png  # optional
 categories: other
-rank: 1
+rank: 5
 author: "Drishti Sharma"
 authors: "Ram Mohan Rao Kadiyala, Siddartha Pullakhandam, Kanwal Mehreen, <strong>Drishti Sharma</strong>, Siddhant Gupta, Jebish Purbey, Ashay Srivastava, Subhasya TippaReddy, Arvind Reddy Bobbili, Suraj Telugara Chandrashekhar, Modabbir Adeeb, Srinadh Vura, Hamza Farooq"
 venue: "ACL 2025 (Submitted)"
