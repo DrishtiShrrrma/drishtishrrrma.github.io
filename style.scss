@@ -143,3 +143,14 @@ p {
   text-justify: inter-word;
 }
 
+/* Center the image in the first child div of each project container */
+.project-container > div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-container > div:first-child img {
+  max-width: 100%;
+  height: auto;
+}
