@@ -4,6 +4,7 @@ title: "Synthetic Multilingual Instruction Generation for Low-Resource Languages
 date: 2024-08-07 00:00:00 +0000
 image: /images/synthetic-dataset.png  # optional; replace with actual image if available
 categories: [other]
+rank: 11
 authors: "Desik, Roshan, Rosemary, <strong>Drishti Sharma</strong>, Gaurav, Hanif"
 dataset: https://huggingface.co/datasets/desik98/MultilingualSyntheticData
 slides: https://docs.google.com/presentation/d/1C6xmVYP86IeWosCsizbPPPn0_5wIK0oDp_E0dbMuUV4/edit?slide=id.g2f6dd5e1ca9_26_0
