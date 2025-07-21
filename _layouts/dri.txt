@@ -14,6 +14,8 @@ You can find an overview of my work here:
 I've always been drawn to understanding complex systems and the idea that we can build machines capable of learning, reasoning, and even creativity. What truly attracted me to this field is the intersection of curiosity, real-world impact, and interdisciplinary potential. Over time, while analyzing patents at the intersection of electronics and AI/ML, I became increasingly fascinated by the core principles and innovations shaping the field. That exposure deepened my curiosity and inspired me to dive into both the theoretical and practical aspects of AI—eventually leading me to pursue it more seriously through research and hands-on projects.
 
 
+What truly drew me to this field is the intersection of curiosity, real-world impact, and interdisciplinary potential. Over time, while analyzing patents at the intersection of Electronics and AI/ML, I became increasingly fascinated by the core principles and innovations shaping the field. That exposure deepened my curiosity and inspired me to dive into both the theoretical and practical aspects of AI/ML - eventually leading me to pursue it more seriously through research and hands-on projects.
+
 
 Yes. I have extensive experience contributing to several research projects across open science communities like Cohere Labs, Hugging Face and Traversaal AI. My research spans a range of topics including design, optimization and alignment of LLMs and VLMs; ; evaluation metric analysis and validation; audio deep learning; reinforcement learning; and AI ethics and fairness. 
 
