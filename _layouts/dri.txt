@@ -12,3 +12,30 @@ You can find an overview of my work here:
 
 
 I've always been drawn to understanding complex systems and the idea that we can build machines capable of learning, reasoning, and even creativity. What truly attracted me to this field is the intersection of curiosity, real-world impact, and interdisciplinary potential. Over time, while analyzing patents at the intersection of electronics and AI/ML, I became increasingly fascinated by the core principles and innovations shaping the field. That exposure deepened my curiosity and inspired me to dive into both the theoretical and practical aspects of AI—eventually leading me to pursue it more seriously through research and hands-on projects.
+
+
+
+Yes. I have extensive experience contributing to several research projects across open science communities like Cohere Labs, Hugging Face and Traversaal AI. My research spans a range of topics including design, optimization and alignment of LLMs and VLMs; ; evaluation metric analysis and validation; audio deep learning; reinforcement learning; and AI ethics and fairness. 
+
+I've co-authored papers accepted at venues including ACL, CVPR, ICLR, CSCW, and COLING, and have served as a reviewer for ACL, EMNLP, and ICLR.
+
+Selected research highlights:
+
+1. Behind Maya: Building a Multilingual Vision Language Model --- accepted to VLMs4ALL Workshop @ CVPR 2025 [https://arxiv.org/abs/2505.08910]
+2. M-REWARDBENCH: Evaluating Reward Models in Multilingual Settings --- accepted to ACL 2025 Main Conference [ https://arxiv.org/pdf/2410.15522]
+3. Analysis and Validation of the Perplexity Evaluation Metric [https://tinyurl.com/yss9wm79] 
+4. Lexical Reranking of Semantic Retrieval for Regulatory QA --  accepted to COLING 2025 [https://arxiv.org/pdf/2412.06009] 
+5. Sparse Upcycling of VLMs [https://tinyurl.com/46vy6xzr] & Model Compression Techniques [https://tinyurl.com/2m8nedr4] 
+6. Knowledge Explorer - Multi-agent Educational Assistant --- accepted to CSCW 2025
+7. AI ethics and fairness [https://tinyurl.com/5amx8zr5    &    https://tinyurl.com/a556trny ] 
+8. Evaluation OF Alignment of Vision-Language Reward Modles [https://tinyurl.com/2vaj5tar]
+9. Multilingual Long Chain-of-Thoughts with Small Reasoning Models [https://tinyurl.com/3uzfzp54]
+
+👉  Full portfolio:: https://drishtishrrrma.github.io/
+
+
+
+My research is hands-on, collaborative, and often intersects with real-world applications and open-source efforts.
+
+Prior to this, I worked for nearly four years as an IP Researcher, analyzing innovations involving AI, audio, wireless systems, and electronics, work that laid the interdisciplinary foundation for my current research path.
+
