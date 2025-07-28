@@ -9,6 +9,7 @@ authors: "Srishti Gureja, Lester James V. Miranda, Shayekh Bin Islam, Rishabh Ma
 venue: "ACL 2025 (Main Conference)"
 advisors: "Nathan Lambert, Sebastian Ruder, Sara Hooker, Marzieh Fadaee"
 link: https://arxiv.org/pdf/2410.15522  # replace with actual link
+arxiv: https://arxiv.org/pdf/2410.15522
 code: https://github.com/Cohere-Labs-Community/m-rewardbench  # replace with actual repo
 dataset: https://huggingface.co/datasets/CohereLabsCommunity/multilingual-reward-bench  # replace with dataset
 leaderboard: https://coherelabscommunity-m-rewardbench.hf.space/  # replace if available
