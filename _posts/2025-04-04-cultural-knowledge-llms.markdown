@@ -6,7 +6,8 @@ image: /images/cultural-llms.png  # optional
 categories: other
 rank: 10
 authors: "Ram Mohan Rao Kadiyala, Siddartha Pullakhandam, Siddhant Gupta, <strong>Drishti Sharma</strong>, Jebish Purbey, Kanwal Mehreen, Muhammad Arham, Hamza Farooq"
-preprint manuscript: https://arxiv.org/pdf/2504.09753  # optional
+arxiv: https://arxiv.org/pdf/2504.09753  # optional
+link: https://arxiv.org/pdf/2504.09753  # optional
 model: https://huggingface.co/large-traversaal/Mantra-14B
 hf demo: https://huggingface.co/spaces/large-traversaal/Mantra-14B-Demo
 user interaction log: https://huggingface.co/datasets/large-traversaal/mantra-14b-user-interaction-log
